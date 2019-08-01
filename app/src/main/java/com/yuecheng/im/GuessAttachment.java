@@ -1,4 +1,4 @@
-package com.netease.nim.demo.session.extension;
+package com.yuecheng.im;
 
 import com.alibaba.fastjson.JSONObject;
 

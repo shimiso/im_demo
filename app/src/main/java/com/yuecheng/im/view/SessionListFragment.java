@@ -23,6 +23,7 @@ import com.netease.nimlib.sdk.msg.attachment.MsgAttachment;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
+import com.yuecheng.im.GuessAttachment;
 import com.yuecheng.im.R;
 import com.yuecheng.im.MainTab;
 
@@ -224,7 +225,9 @@ public class SessionListFragment extends MainTabFragment {
                 if (attachment instanceof GuessAttachment) {
                     GuessAttachment guess = (GuessAttachment) attachment;
                     return guess.getValue().getDesc();
-                } else if (attachment instanceof RTSAttachment) {
+                }
+
+               /* else if (attachment instanceof RTSAttachment) {
                     return "[白板]";
                 } else if (attachment instanceof StickerAttachment) {
                     return "[贴图]";
@@ -234,7 +237,7 @@ public class SessionListFragment extends MainTabFragment {
                     return "[红包]";
                 } else if (attachment instanceof RedPacketOpenedAttachment) {
                     return ((RedPacketOpenedAttachment) attachment).getDesc(recentContact.getSessionType(), recentContact.getContactId());
-                }
+                }*/
 
                 return null;
             }
